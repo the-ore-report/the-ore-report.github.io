@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Ore Report</title>
-  <meta name="description" content="A newsletter on the major news shaping the mining industry." />
+  <meta name="description" content="A monthly newsletter on the major news shaping the mining industry — written for students and newcomers." />
   <style>
     :root {
       --bg: #0f1115;
@@ -29,21 +29,18 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      line-height: 1.6;
     }
 
     main {
       flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1.5rem;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 3rem;
     }
 
-    .card {
-      width: 100%;
-      max-width: 560px;
-      text-align: center;
-    }
+    .hero { text-align: center; margin-bottom: 3.5rem; }
 
     h1 {
       font-size: clamp(2.4rem, 7vw, 3.6rem);
@@ -57,8 +54,8 @@
     .tagline {
       font-size: clamp(1.05rem, 3.5vw, 1.25rem);
       color: var(--muted);
-      line-height: 1.5;
-      margin: 0 0 2.5rem;
+      max-width: 32rem;
+      margin: 0 auto 2rem;
     }
 
     .subscribe {
@@ -76,6 +73,55 @@
     .subscribe:hover { background: var(--accent-hover); }
     .subscribe:active { transform: translateY(1px); }
 
+    section { margin-bottom: 3rem; }
+
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 0 0 1rem;
+      font-weight: 700;
+    }
+
+    section p { margin: 0 0 1rem; color: var(--text); }
+    section p:last-child { margin-bottom: 0; }
+
+    .sections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+    }
+
+    .section-card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .section-card p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .topics-note {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 10px;
+      padding: 1.4rem 1.6rem;
+    }
+
+    .topics-note a { color: var(--accent); }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -87,16 +133,61 @@
 </head>
 <body>
   <main>
-    <div class="card">
+    <div class="hero">
       <h1>The Ore Report</h1>
 
       <!-- ===== EDIT THIS LINE to change your tagline ===== -->
-      <p class="tagline">A newsletter on the major news shaping the mining industry.</p>
+      <p class="tagline">A monthly digest of the news shaping mining — written in plain language for students and newcomers to the field.</p>
 
       <!--
-        ===== PASTE YOUR REAL BEEHIIV LINK BELOW =====
-        Replace  https://YOUR-BEEHIIV-URL-HERE  with your Beehiiv subscribe page URL.
+        ===== YOUR BEEHIIV SUBSCRIBE LINK =====
+        To change it, replace the href URL below.
       -->
+      <a class="subscribe" href="https://theorereport.beehiiv.com">Subscribe</a>
+    </div>
+
+    <section>
+      <h2>What it is</h2>
+      <p>The Ore Report is a free monthly newsletter that rounds up the major developments across mining and explains why they matter. Every story is summarized in clear, jargon-free language, with unfamiliar terms defined right where they come up.</p>
+      <p>It's built for <strong>college students and people newer to the mining industry</strong> — curious readers who want to follow the field without needing an insider's vocabulary to keep up.</p>
+    </section>
+
+    <section>
+      <h2>What it covers</h2>
+      <div class="sections-grid">
+        <div class="section-card">
+          <h3>Critical Minerals</h3>
+          <p>Supply, demand, pricing, policy, and new projects for the minerals behind batteries, defense, and clean energy — lithium, cobalt, nickel, copper, and rare earths.</p>
+        </div>
+        <div class="section-card">
+          <h3>LiDAR &amp; Geospatial</h3>
+          <p>Drone surveying, point clouds, photogrammetry, and mapping technology used to survey and monitor mine sites and terrain.</p>
+        </div>
+        <div class="section-card">
+          <h3>AI &amp; Automation</h3>
+          <p>How artificial intelligence and automation are changing mining — autonomous equipment, predictive maintenance, and AI in exploration, planning, and modeling.</p>
+        </div>
+        <div class="section-card">
+          <h3>Reclamation &amp; Closure</h3>
+          <p>Restoring mined land: revegetation, soil and water management, closure planning, and the regulations that govern it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Help shape it</h2>
+      <div class="topics-note">
+        <!--
+          ===== ADD A CONTACT LINK LATER =====
+          When you're ready to take topic suggestions publicly, add a contact
+          here — e.g. a dedicated email (mailto:) or a form link. Left out for
+          now so no personal address is exposed.
+        -->
+        <p style="margin:0;">Want to see a topic covered? Subscribers can reply to any issue with the subjects they'd like us to dig into — we work reader requests into upcoming issues whenever we can.</p>
+      </div>
+    </section>
+
+    <div class="hero" style="margin-bottom:0;">
       <a class="subscribe" href="https://theorereport.beehiiv.com">Subscribe</a>
     </div>
   </main>
